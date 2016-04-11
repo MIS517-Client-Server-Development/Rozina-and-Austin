@@ -1,5 +1,7 @@
 # MIS517-StudentAttendanceManagementSystem
 
+[![Join the chat at https://gitter.im/MIS517-Client-Server-Development/SAMS-Rozina-and-Austin](https://badges.gitter.im/MIS517-Client-Server-Development/SAMS-Rozina-and-Austin.svg)](https://gitter.im/MIS517-Client-Server-Development/SAMS-Rozina-and-Austin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Goal
 ----
 
