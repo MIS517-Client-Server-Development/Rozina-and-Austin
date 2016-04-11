@@ -1,0 +1,281 @@
+﻿﻿        body {
+    
+        }
+        
+        h2.spanLogin
+        {
+            border-bottom: 3px groove lightgrey;
+            border-top: 3px groove lightgrey;
+            border-right: 3px groove lightgrey;
+            border-left: 3px groove lightgrey;
+            text-align: center;
+            font-family: Verdana;
+            border-spacing: 10px 50px;
+            margin: 0 0 0 0;
+            line-height: 44px;
+            color:Black;
+        }
+       
+.inside
+{
+             border-bottom: 3px groove lightgrey;
+            border-top: 3px groove lightgrey;
+            border-right: 3px groove lightgrey;
+            border-left: 3px groove lightgrey;
+ 
+    
+}
+        .div
+        {
+     
+            color:White;
+            background-color: white;
+            border: solid 2px;
+            border-radius: 4px;
+            width:750px;
+            height: 750px;
+            text-shadow: 3px 3px 7px #333;
+            box-shadow: 0 0 5px;
+            margin-left: 25%;
+            transition: 0.2s linear;
+        resize: both;
+    overflow: auto;
+        }
+            .div:hover p {
+                /*-webkit-animation: fadeOut 0.2s linear forwards;*/
+            }
+            
+        div.image
+        {
+            content: url ("Images/Logo.png");
+        }    
+
+        li
+        {
+            border-collapse: separate;
+            border-bottom: 3px groove #808080;
+            border-bottom-left-radius: 2px;
+            border-bottom-right-radius: 2px; 
+            border-top-left-radius: 2px;
+            border-top-right-radius: 2px;
+            border-spacing: 10px 50px;
+            line-height: 33px;
+        }
+
+        .tab
+        {
+            padding: 0 39px;
+        }
+
+        select
+        {
+            font-family: 'Lucida Bright', Georgia, serif;
+	font-size: 12px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.3999996185303px;
+            -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   background-color: #084848;
+            border: 5px groove #ffa853;
+            border-width: thin;
+            border-color:#FFFFCC;
+            color: white;
+            text-align: center;
+            shape-rendering: optimizeQuality;
+            transition: ease-in-out 0.2s;
+
+        }
+            select:hover
+            {
+                color: white;
+                box-shadow: 0 0 8px;
+                background-image:url(images/page1.png);
+            }
+
+        h2
+        {
+            font-family: Arial;
+            color: white;
+            text-align: center;
+        }
+
+/*#leftnav 
+{
+
+background-image:url(images/page1.png);
+width:300px;
+height:300px;
+padding-left:45px;
+ margin-left:220px;
+}*/
+
+#leftnav 
+{
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px black;
+    background-image:url(images/div3.png);
+    /*background-image:url(images/page1.png);*/
+    width:300px;
+    height:350px;
+    padding-left:45px;
+    margin-left: 53px;
+}
+#maincontent
+{
+    margin-right:-210px;
+    float:right;
+    background-image:url(images/div3.png);
+    width:520px;
+    height:300px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px black;
+    padding-left:45px;
+}
+body {
+background-color:#333333;
+ background-image:url(images/body4.jpg);
+background-repeat:repeat-x;
+background-position:top center;
+font-size:10pt;
+font-family:Arial;
+color:#FFFFFF;
+}
+
+#page {
+width:900px;
+}
+
+#header 
+{
+    clear:both;
+    width:840px;
+    height:111px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px black;
+    background-image:url(images/div3.png);
+    padding-top:30px;
+    padding-left:50px;
+    text-align:center; 
+    margin-left:220px;
+}
+  
+#sidebarnav a {
+	width:240px;
+	display:block;
+	clear:both;
+	padding-left:12px;
+	padding-top:6px;
+	height:25px;
+	border-right:3px solid #27595e;
+	color:#FFFFFF;
+	text-decoration:none;
+	font-size:14px;
+	font-weight:bold;
+	margin-top:3px;
+  }
+  
+  
+#sidebarnav a:hover, #sidebarnav a.active {
+	text-decoration:none;
+	background-color:#2b4b4e;
+	border-right:3px solid #217077;
+	color:#FFFFFF;
+}
+
+#contentarea {
+width:535px;
+padding-right:12px;
+padding-bottom:20px;
+float:left;
+line-height:14pt;
+}
+
+#sidebar {
+float:left;
+width:245px;
+background-image:url(images/sidebartop.png);
+background-repeat:no-repeat;
+line-height:14pt;
+}
+
+.widget {
+padding-left:15px;
+padding-right:15px;
+padding-top:15px;
+}
+
+#footer 
+{
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px black;
+    background-image:url(images/div3.png);
+    margin-left:305px;
+    margin-top:70px;
+    width:700px;
+    clear:both;
+    height:30px;
+    padding-top:40px;
+    text-align:center;
+    color:#FFFFCC;
+    font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
+	font-size: 20px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.3999996185303px;
+    /*background-image:url(images/header.png);*/
+    background-repeat:no-repeat;
+    background-color:#FFFFFF;
+}
+
+h1 {
+color:#FFFFCC;font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
+	font-size: 40px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.3999996185303px;
+}
+
+h2 {
+color:#FFFFCC;font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
+	font-size: 20px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.3999996185303px;
+}
+.LabelMarks {
+color:#FFFFCC;font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
+	font-size: 20px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.3999996185303px;
+}
+p1, a
+{
+ font-family: Papyrus, fantasy;
+	font-size: 15px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.3999996185303px;   
+    
+}
+.description {
+font-size:14pt;
+color:#FFFFFF;
+margin:0;
+}
+
+a {
+text-decoration:none;
+}
+
+a:hover {
+text-decoration:underline;
+}

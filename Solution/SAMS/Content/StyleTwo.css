@@ -1,0 +1,352 @@
+﻿﻿
+        @-webkit-keyframes slideRight {
+            0% {
+                width: 4px;
+            }
+            100% {
+                width: 200px;
+            }
+        }
+
+        @-webkit-keyframes slideLeft {
+            0% {
+                width: 200px;
+            }
+            100% {
+                width: 4px;
+            }
+        }
+
+        @-webkit-keyframes fadeOut {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @-webkit-keyframes fadeIn {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @-webkit-keyframes dropDown {
+            0% {
+                height: 20px;
+            }
+            100% {
+                height: 130px;
+            }
+        }
+
+        @-webkit-keyframes pullUp {
+            0% {
+                height: 130px;
+            }
+            100% {
+                height: 20px;
+            }
+        }
+
+        @-webkit-keyframes listIndices
+        {
+            0%
+            {
+                opacity: 0;
+            }
+            100%
+            {
+                opacity: 1;
+            }
+        }
+
+
+        .element2 {
+            text-align: center;
+            float:right;
+            margin-top:-140px;
+            margin-right:-450px;
+            width: 155px;
+            height: 8px;
+            color: black;
+            background-color: #b5b5b5;
+            white-space: nowrap;
+            text-shadow: 3px 3px 7px #333;
+            font-family: Verdana;
+            border: 3px groove #FFFFCC;
+            transition: 0.2s linear;
+            -webkit-animation: pullUp 0.2s linear forwards;
+        }
+            .element2:hover 
+            {
+                -webkit-animation: dropDown 0.2s linear forwards;
+            }
+            .element2 ul 
+            {
+                text-align: left;
+                list-style-type: none;
+                visibility: hidden;
+            }
+                .element2 ul li 
+                {
+                    border-spacing: 10px 50px;
+                }
+            .element2:hover ul {
+                transition: ease-in 0.2s 0.2s;
+                visibility: visible;
+            }
+            .element2 ul li a {
+                font-family: Verdana;
+                color: white;
+                text-decoration: none;
+            }
+                .element2 ul li a:hover {
+                    color: yellow;
+                }
+                .element2 ul li a:active {
+                    color: red;
+                }
+
+        .element {
+            text-align: center;
+            float:left;
+            margin-left:-10px;
+            width: 4px;
+            color: black;
+            height: 380px;
+            color: black;
+            background-color: #b5b5b5;
+            white-space: nowrap;
+            text-shadow: 3px 3px 7px #333;
+            font-family: Verdana;
+            box-shadow: 0 0 5px;
+            border: 1px solid;
+            -webkit-animation: slideLeft 0.2s ease-out forwards;
+        }
+            .element a.current {
+                color: red;
+            }
+            .element:hover
+            {
+                -webkit-animation: slideRight 0.2s 0.2s ease-in forwards;
+            }
+            .element #new1
+            {
+                right: 10%;
+                position: absolute;
+                visibility: hidden;
+                text-align: center;
+                
+            }
+                .element:hover #new1
+                {
+                    transition: ease-in 0.2s 0.4s;  /* behaviour of span in div only for entrance*/
+                    visibility: visible;
+                    color: white;
+                }
+            .element ul
+            {
+                float:left;
+                text-align: left;
+                list-style-type: none;
+                text-decoration: none;
+                visibility: hidden;
+            }
+            .element:hover ul
+            {
+                transition: ease-in 0.2s 0.4s; /*behaviour of unordered list only for entrance*/
+                visibility: visible;
+            }
+            .element ul li a
+            {
+                color:#FFFFCC;font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
+	font-size: 13px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.3999996185303px;
+          }
+            .element ul li a:hover
+            {
+                color: yellow;
+            }
+                .element ul li a:active
+                {
+                    color: red;
+                }
+
+        .textbox
+        {
+            font-family: 'Lucida Bright', Georgia, serif;
+	        font-size: 12px;
+	        font-style: normal;
+	        font-variant: normal;
+	        font-weight: 500;
+	        color: black;
+            background-color: #b5b5b5;
+            width: 200px;
+            font: bold;
+            border: 3px groove #FFFFCC;
+            padding: 5px;
+            transition: linear 0.2s;
+        }
+            .textbox:hover
+            {
+                background-color: white;
+                padding: 5px;
+                box-shadow: 0 0 8px;
+            }
+            .textbox:active
+            {
+                background-color: grey;
+                padding: 5px;
+                box-shadow: 0 0 8px;
+            }
+
+        p
+        {
+            margin-left: 20%;
+            color: black;
+        }
+
+        h2.spanLogin
+        {
+            border-bottom: 3px groove lightgrey;
+            text-align: center;
+            font-family: Verdana;
+            border-spacing: 10px 50px;
+            margin: 0 0 0 0;
+            line-height: 44px;
+            color:Black;
+        }
+
+        li
+        {
+            border-collapse: separate;
+            border-bottom: 3px groove #808080;
+            border-bottom-left-radius: 2px;
+            border-bottom-right-radius: 2px; 
+            border-top-left-radius: 2px;
+            border-top-right-radius: 2px;
+            border-spacing: 10px 50px;
+            line-height: 33px;
+        }
+
+        .tab
+        {
+            padding: 0 39px;
+        }
+
+        .dropdown
+        {
+            font-family: Verdana;
+            padding: 5px;
+            background-color: lightyellow;
+            color: darkslategray;
+            border: 5px groove #ffa853;
+            border-radius: 15px;
+            border-width: thin;
+            border-color: blueviolet;
+            color: #000;
+            text-align: center;
+            shape-rendering: optimizeQuality;
+            transition: ease-in-out 0.2s;
+        }
+            .dropdown:hover
+            {
+                color: white;
+                box-shadow: 0 0 8px;
+                background-color: red;
+            }
+
+        h2
+        {
+            font-family: Arial;
+            text-align: center;
+        }
+
+.buttonCSS
+        {
+            font-family: 'Lucida Bright', Georgia, serif;
+	        font-size: 15px;
+	        font-style: normal;
+	        font-variant: normal;
+	        font-weight: 500;
+	        line-height: 26.3999996185303px;
+            padding: 5px;
+            background-color: #b5b5b5;
+            border: 2px outset #ffa853;
+            border-radius: 5px;
+            border-width: thin;
+            border-color:#FFFFCC;
+            text-align: center;
+            color: black;
+            shape-rendering: optimizeQuality;
+            transition: ease-out 0.2s;
+        }
+            .buttonCSS:hover
+            {
+                color: black;
+                background-color: white;
+            }
+            .buttonCSS:active
+            {
+                background-color: grey;
+                border: 1px inset #ffa853;
+            }
+
+.buttonCSS1
+        {
+            font-family: 'Lucida Bright', Georgia, serif;
+	        font-size: 10px;
+	        font-style: normal;
+	        font-variant: normal;
+	        font-weight: 500;
+	        line-height: 26.3999996185303px;
+            padding: 2px;
+            background-color: #b5b5b5;
+            border: 2px outset #ffa853;
+            border-radius: 2px;
+            border-width: thin;
+            border-color:#FFFFCC;
+            text-align: center;
+            color: black;
+            shape-rendering: optimizeQuality;
+            transition: ease-out 0.2s;
+        }
+            .buttonCSS1:hover
+            {
+                color: black;
+                background-color: white;
+            }
+            .buttonCSS1:active
+            {
+                background-color: grey;
+                border: 1px inset #ffa853;
+            }
+
+    #maincontent1 {
+        margin-left: 200px;
+        background-image: url('images/div3.png');
+        border-radius: 5px;
+    box-shadow: 2px 2px 2px black;
+        width: 915px;
+        padding-left: 45px;
+    }
+    #define h1
+    {
+        margin-left:450px;
+        text-align:center;font-size:30px;
+    }
+  .GridDock
+        {
+            overflow-x: auto;
+            overflow-y: hidden;
+            width: 900px;
+            padding: 0 0 17px 0;
+        }
