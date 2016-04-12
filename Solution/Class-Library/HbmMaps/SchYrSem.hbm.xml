@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="BusinessLogic.Layer.BusinessObjects" assembly="BusinessLogic.Layer">
+	<class name="BusinessLogic.Layer.BusinessObjects.SchYrSem, BusinessLogic.Layer" table="[dbo].[SchYrSem]" lazy="true">
+		<id name="Id" column="[ID]">
+		 	<generator class="native" />
+		</id>
+		<property name="SchYr" column="[SchYr]" />
+		<property name="Sem" column="[Sem]" />
+		<property name="Year" column="[Year]" />
+		<property name="Section" column="[Section]" />
+		<property name="Override" column="[Override]" />
+		<property name="Regular" column="[Regular]" />
+		<property name="Enrolled" column="[Enrolled]" />
+		<property name="ProgramAlias" column="[ProgramAlias]" />
+		<property name="Remarks" column="[Remarks]" />
+		<many-to-one name="Major" column="[MajorID]" class="Major" />
+		<many-to-one name="Program" column="[ProgramID]" class="Program" />
+		<many-to-one name="Student" column="[StudentID]" class="Student" />
+		<bag name="SchYrSemCourseJoins" lazy="true" cascade="all-delete-orphan" inverse="true" >
+			<key column="[SchYrSemID]"></key>
+			<one-to-many class="SchYrSemCourseJoin"></one-to-many>
+		</bag>
+	</class>
+</hibernate-mapping>
+

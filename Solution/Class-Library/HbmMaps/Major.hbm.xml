@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="BusinessLogic.Layer.BusinessObjects" assembly="BusinessLogic.Layer">
+	<class name="BusinessLogic.Layer.BusinessObjects.Major, BusinessLogic.Layer" table="[dbo].[Major]" lazy="true">
+		<id name="Id" column="[ID]">
+		 	<generator class="native" />
+		</id>
+		<property name="MajorMember" column="[Major]" />
+		<property name="Level" column="[Level]" />
+		<bag name="SchYrSems" lazy="true" cascade="all" inverse="true" >
+			<key column="[MajorID]"></key>
+			<one-to-many class="SchYrSem"></one-to-many>
+		</bag>
+	</class>
+</hibernate-mapping>
+

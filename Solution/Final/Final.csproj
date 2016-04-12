@@ -120,13 +120,30 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\FacultyController.cs" />
+    <Compile Include="Controllers\GradeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="Controllers\SubjectController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AccountModel.cs" />
+    <Compile Include="Models\AdminModel.cs" />
+    <Compile Include="Models\FacultyModel.cs" />
+    <Compile Include="Models\MajorModel.cs" />
+    <Compile Include="Models\ProgramModel.cs" />
+    <Compile Include="Models\StudentModel.cs" />
+    <Compile Include="Models\SubjectModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\DB1.mdf" />
+    <Content Include="App_Data\DB1_log.ldf">
+      <DependentUpon>DB1.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -148,6 +165,8 @@
     <Content Include="Content\Images\silver.jpg" />
     <Content Include="Content\Images\splash.jpg" />
     <Content Include="Content\Images\water.jpg" />
+    <Content Include="Content\jqgrid\css\ui.jqgrid.css" />
+    <Content Include="Content\jqgrid\css\ui.jqgrid.min.css" />
     <Content Include="Content\jqueryui\i18n\jquery-ui-i18n.js" />
     <Content Include="Content\jqueryui\i18n\jquery-ui-i18n.min.js" />
     <Content Include="Content\jqueryui\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
@@ -697,6 +716,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Content\material.min.css.map" />
+    <Content Include="Content\jqgrid\css\ui.jqgrid.min.css.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\chartist\chartist.js" />
     <Content Include="Scripts\chartist\chartist.min.css" />
@@ -1275,8 +1295,12 @@
     <Content Include="Scripts\metro\fonts\metro.woff" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="Views\Account\" />
+    <Folder Include="Views\Admin\" />
+    <Folder Include="Views\Faculty\" />
+    <Folder Include="Views\Grade\" />
+    <Folder Include="Views\Student\" />
+    <Folder Include="Views\Subject\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

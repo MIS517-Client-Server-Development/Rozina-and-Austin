@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="BusinessLogic.Layer.BusinessObjects" assembly="BusinessLogic.Layer">
+	<class name="BusinessLogic.Layer.BusinessObjects.Account, BusinessLogic.Layer" table="[dbo].[Account]" lazy="true">
+		<id name="Id" column="[UserID]">
+		 	<generator class="assigned" />
+		</id>
+		<property name="Password" column="[Password]" />
+		<many-to-one name="Admin" column="[AdminID]" class="Admin" />
+		<many-to-one name="Faculty" column="[FacultyID]" class="Faculty" />
+		<many-to-one name="Student" column="[StudentID]" class="Student" />
+	</class>
+</hibernate-mapping>
+

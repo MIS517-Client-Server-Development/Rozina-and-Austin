@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="BusinessLogic.Layer.BusinessObjects" assembly="BusinessLogic.Layer">
+	<class name="BusinessLogic.Layer.BusinessObjects.Grade, BusinessLogic.Layer" table="[dbo].[Grade]" lazy="true">
+		<id name="Id" column="[ID]">
+		 	<generator class="native" />
+		</id>
+		<property name="GradeMember" column="[Grade]" />
+		<many-to-one name="Course" column="[SubjectID]" class="Course" />
+		<many-to-one name="Faculty" column="[FacultyID]" class="Faculty" />
+		<many-to-one name="Student" column="[StudentID]" class="Student" />
+	</class>
+</hibernate-mapping>
+
