@@ -1,4 +1,4 @@
-# MIS517-StudentAttendanceManagementSystem
+# MIS517-StudentEnrollmentManagementSystem
 
 Goal
 ----
@@ -20,100 +20,88 @@ The Project
 
 A sample project is proposed below; however, students can develop their own project if they want to. The size of the project and the milestones should be similar to the one shown in the sample project. If you decide to do your own project, you need develop milestones by week 7 and discuss them with me before starting the project. If a project is not discussed, you are required to complete the project below.
 
-The "standard" project will be to build part of a website for “**Student Attendance Management website**”. This website will be developed for recording the attendance of the students on the daily basis in the college. Here the Instructor, who is teaching the subjects and will be responsible for recording the attendance of the students. Each instructor will be given a separate username and password based on the subject they teach. This system will also help in evaluating attendance eligibility criteria of a student. The site will display the student’s attendance on monthly basis.
+The "standard" project will be to build part of a website for “**Student Enrollment Management website**”. 
 
 There will be a project plan with *milestones* and *deliverables.* The milestones serve as control points to verify the proper progress. The project will allow students to integrate many programming tools to achieve the goal. Some of those tools will be discussed in the class. Others can be obtained using the external resources.
 
 Requirements
 ------------
 
-The **Student Attendance Management site** allows the user to access his/her class information. Below are the details of the requirements.
+The **Student Enrollment Management System** allows the user to access his/her class information. Below are the details of the requirements.
 
 1.  The main login screen should have username and password and buttons to allow the user to log in. It also provides a link or a button to allow the user to register a new user.
-
 2.  When the user successfully login, the main screen will provide access to the instructor page.
-
-3.  You will design a page for entering the student information.
-
-4.  The website allows the instructor to find the students with the 5 fewest and 5 most absences.
-
-5.  The website lets the instructor enter, review, update and delete the attendance of the students of the class.
-
-6.  The user should be able to log out at any time. If the user logout, the application should take the user to the login screen.
+3. Instructor will be able to entering the student information.
+4. Admins can create new courses
+5. Students Can Enroll in a course listed under courses listings.
+6. Departments offer certain courses.
+7. Instructor (employees) are assigned to departments.
+8.  The website lets the instructor enter, review, update and delete the enrollment of the students of the class.
+9.  The website will allow students drop courses as well.
+10. The user should be able to log out at any time. If the user logout, the application should take the user to the login screen.
 
 Team requirements:
 ------------------
 
 You may work in a team of 2 if you complete the following requirements also.
 
-1.  You are required to use Github to manage the code for a team project. The project can either be a publicly available project or else the MIS517 professor must be added to the project. Each teammate should have their own github account and commits should be made from the account of the student making the changes. If only one account commits code, only one student will receive credit for completing the project.
+- You are required to use Github to manage the code for a team project. The project can either be a publicly available project or else the MIS517 professor must be added to the project. Each teammate should have their own github account and commits should be made from the account of the student making the changes. If only one account commits code, only one student will receive credit for completing the project.
 
-2.  There will be an Admin page to create a new login entry for new teachers/classes.
 
-3.  Design a *class* named ***Extra Credit.*** The class has a method called ***Calculate*** which computes extra credit (bonus) for students based on their attendance, using the following rules:
-
-If the student attendance percent &gt;= 90% then the bonus =10 points o If the attendance &gt;=70 and &lt;90 then bonus =8
-
-If the attendance &gt;=60 and &lt;70 then bonus =6
-
-If the attendance &gt;50 and &lt;60 then bonus =2 o Otherwise bonus =0
-
-The result should be stored in a new field in the student information table when the
 
 Database Design
 ---------------
 
 The database should have the following tables: 
 
-1. *Login Table*
 
-2. *Subject Table*
-
+## Login Table
 
 
-|           |               |                 |                    |
-|-----------|---------------|-----------------|--------------------|
-| **Field** | **Data Type** | **Constraints** | **Description**    |
-| Scode     | Number        | Primary key     | Subject code       |
-| Ssname    | Text          | Not Null        | Short subject name |
+## Admin Table
+
+**Admin** ( Admin_ID, First_Name, Last_Name, Email, Password)
+**PRIMARY KEY**: Admin_ID
+**FOREIGN KEY**:
+
+## Course Table
+
+**Course** ( Course_ID, CourseNumber, CourseTitle, Description, Prereq, Units)
+**PRIMARY KEY**: Course_ID
+**FOREIGN KEY**:
+
+## Instructor To Course Table
+
+**Instructor_To_Course** (Course_ID, Instructor_ID, CourseTitle) 
 
 
-3.Instructor Table
+## Student To Course Table
 
 
-|              |               |                 |                 |
-|--------------|---------------|-----------------|-----------------|
-| **Field**    | **Data Type** | **Constraints** | **Description** |
-| InstructorID | Number        | Primary key     | Instructor id   |
-| Scode        | Number        | Foreign key     | Subject code    |
+**Student_To_Course** (Course_ID, CourseTitle, Student_Id) 
 
-4.Student Information Table
 
-|            |               |                 |                       |
-|------------|---------------|-----------------|-----------------------|
-| **Field**  | **Data Type** | **Constraints** | **Description**       |
-| RollNo     | Number        | Primary key     | Student roll number   |
-| Name       | Text          | Not Null        | Student Name          |
-| Department | Text          | Not Null        | Department name       |
-| DOB        | Date          | Not Null        | Student date of birth |
-| Address    | Text          | Not Null        | Student address       |
-| MNo        | Text          | Not Null        | Student Mobil no.     |
-| EID        | Text          | Not Null        | Student Email         |
-| Notes      | Text          | -               |                       |
+## Enrollment Table
 
-5.Attendance table
+**PRIMARY KEY**: 
+**FOREIGN KEY**:
 
-|            |               |                 |                              |
-|------------|---------------|-----------------|------------------------------|
-| **Field**  | **Data Type** | **Constraints** | **Description**              |
-| ID         | Number        | Primary key     |                              |
-| Date       | Date          | Not Null        | Enter day by day attendance  |
-| Hour       | Number        | Not Null        | Set particular hour only     |
-| Scode      | Number        | Not Null        | Subject code                 |
-| RollNo     | Number        | Not Null        | Student roll number          |
-| Attendance | Text          | -               | Enter present/absent details |
 
-> Note: Feel free to add any tables or fields if needed.
+## Schedule Table
+
+**PRIMARY KEY**: 
+**FOREIGN KEY**:
+
+## Instructor Table
+
+
+**PRIMARY KEY**: 
+**FOREIGN KEY**:
+
+## Student Table
+
+**PRIMARY KEY**: 
+**FOREIGN KEY**:
 
 ## Project Grading
 
