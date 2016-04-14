@@ -84,11 +84,14 @@ The database should have the following tables:
 
 ## Student To Course Table
 
+**Student_To_Course** (Course_ID, CourseTitle, Student_Id) 
+
+
 **PRIMARY KEY**: 
 
 **FOREIGN KEY**:
 
-**Student_To_Course** (Course_ID, CourseTitle, Student_Id) 
+
 
 
 ## Enrollment Table
