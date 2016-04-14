@@ -61,22 +61,32 @@ The database should have the following tables:
 ## Admin Table
 
 **Admin** ( Admin_ID, First_Name, Last_Name, Email, Password)
+
 **PRIMARY KEY**: Admin_ID
+
 **FOREIGN KEY**:
 
 ## Course Table
 
 **Course** ( Course_ID, CourseNumber, CourseTitle, Description, Prereq, Units)
+
 **PRIMARY KEY**: Course_ID
+
 **FOREIGN KEY**:
 
 ## Instructor To Course Table
 
 **Instructor_To_Course** (Course_ID, Instructor_ID, CourseTitle) 
 
+**PRIMARY KEY**: 
+
+**FOREIGN KEY**:
 
 ## Student To Course Table
 
+**PRIMARY KEY**: 
+
+**FOREIGN KEY**:
 
 **Student_To_Course** (Course_ID, CourseTitle, Student_Id) 
 
@@ -84,23 +94,27 @@ The database should have the following tables:
 ## Enrollment Table
 
 **PRIMARY KEY**: 
+
 **FOREIGN KEY**:
 
 
 ## Schedule Table
 
 **PRIMARY KEY**: 
+
 **FOREIGN KEY**:
 
 ## Instructor Table
 
 
 **PRIMARY KEY**: 
+
 **FOREIGN KEY**:
 
 ## Student Table
 
 **PRIMARY KEY**: 
+
 **FOREIGN KEY**:
 
 ## Project Grading
