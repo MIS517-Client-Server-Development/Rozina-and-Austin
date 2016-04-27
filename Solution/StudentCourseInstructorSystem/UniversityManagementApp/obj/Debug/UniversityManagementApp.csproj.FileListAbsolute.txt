@@ -1,0 +1,26 @@
+I:\C#\Project-02\UniversityManagementApp\UniversityManagementApp\bin\UniversityManagementApp.dll.config
+I:\C#\Project-02\UniversityManagementApp\UniversityManagementApp\bin\UniversityManagementApp.dll
+I:\C#\Project-02\UniversityManagementApp\UniversityManagementApp\bin\UniversityManagementApp.pdb
+I:\C#\Project-02\UniversityManagementApp\UniversityManagementApp\obj\Debug\UniversityManagementApp.csprojResolveAssemblyReference.cache
+I:\C#\Project-02\UniversityManagementApp\UniversityManagementApp\obj\Debug\UniversityManagementApp.dll
+I:\C#\Project-02\UniversityManagementApp\UniversityManagementApp\obj\Debug\UniversityManagementApp.pdb
+E:\C#\Project-02\UniversityManagementApp\UniversityManagementApp\bin\UniversityManagementApp.dll.config
+E:\C#\Project-02\UniversityManagementApp\UniversityManagementApp\bin\UniversityManagementApp.dll
+E:\C#\Project-02\UniversityManagementApp\UniversityManagementApp\bin\UniversityManagementApp.pdb
+E:\C#\Project-02\UniversityManagementApp\UniversityManagementApp\obj\Debug\UniversityManagementApp.dll
+E:\C#\Project-02\UniversityManagementApp\UniversityManagementApp\obj\Debug\UniversityManagementApp.pdb
+E:\C#\Project-02\UniversityManagementApp\UniversityManagementApp\obj\Debug\UniversityManagementApp.csprojResolveAssemblyReference.cache
+E:\Chayan\Project-02\UniversityManagementApp\UniversityManagementApp\bin\UniversityManagementApp.dll.config
+E:\Chayan\Project-02\UniversityManagementApp\UniversityManagementApp\bin\UniversityManagementApp.dll
+E:\Chayan\Project-02\UniversityManagementApp\UniversityManagementApp\bin\UniversityManagementApp.pdb
+E:\Chayan\Project-02\UniversityManagementApp\UniversityManagementApp\obj\Debug\UniversityManagementApp.csprojResolveAssemblyReference.cache
+E:\Chayan\Project-02\UniversityManagementApp\UniversityManagementApp\obj\Debug\UniversityManagementApp.dll
+E:\Chayan\Project-02\UniversityManagementApp\UniversityManagementApp\obj\Debug\UniversityManagementApp.pdb
+I:\C#\Project-02\UniversityManagementApp\UniversityManagementApp\bin\Rotativa.dll
+E:\Live projects\StudentCourseInstructorSystem\UniversityManagementApp\bin\UniversityManagementApp.dll.config
+E:\Live projects\StudentCourseInstructorSystem\UniversityManagementApp\bin\UniversityManagementApp.dll
+E:\Live projects\StudentCourseInstructorSystem\UniversityManagementApp\bin\UniversityManagementApp.pdb
+E:\Live projects\StudentCourseInstructorSystem\UniversityManagementApp\bin\Rotativa.dll
+E:\Live projects\StudentCourseInstructorSystem\UniversityManagementApp\obj\Debug\UniversityManagementApp.csprojResolveAssemblyReference.cache
+E:\Live projects\StudentCourseInstructorSystem\UniversityManagementApp\obj\Debug\UniversityManagementApp.dll
+E:\Live projects\StudentCourseInstructorSystem\UniversityManagementApp\obj\Debug\UniversityManagementApp.pdb
