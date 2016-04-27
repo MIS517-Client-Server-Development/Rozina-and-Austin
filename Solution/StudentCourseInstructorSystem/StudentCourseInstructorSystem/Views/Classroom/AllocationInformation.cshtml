@@ -1,0 +1,74 @@
+﻿@using UniversityManagementApp.Models
+
+@{
+    Layout = null;
+    List<RoomAllocationView> allocations = ViewBag.AllocationInformation;
+    int totalRows = allocations.Count();
+    int sl = 1;
+    string courseCode = "";
+}
+
+<div class="panel panel-default" style="margin-top: 15px;">
+    <div class="panel-heading">
+        Course Scheduled
+    </div>
+    <!-- /.panel-heading -->
+    <div class="panel-body">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="table-responsive table-bordered">
+                @if (totalRows > 0)
+                {
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Course Code</th>
+                                <th>Name</th>
+                                <th>Schedule Information</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var row in allocations)
+                            {
+                                if (courseCode != row.CourseCode)
+                                {
+                                    courseCode = row.CourseCode;
+                                    if (sl > 1)
+                                    {
+                                        @Html.Raw("</td></tr>") 
+                                    }
+                                    @:<tr> 
+                                    <td>@row.CourseCode</td>
+                                    <td>@row.CourseName</td>
+                                    @:<td> 
+                                    if (row.RoomNo == "")
+                                    {
+                                        @("Not Scheduled Yet")
+                                    }
+                                    else
+                                    {
+                                        @(row.RoomNo + ", " + row.DayName + ", " + row.StartTime + " - " + row.EndTime)
+                                    }
+                                }
+                                else
+                                {
+                                    @Html.Raw(";<br/>" + row.RoomNo + ", " + row.DayName + ", " + row.StartTime + " - " + row.EndTime)
+                                }
+                                sl++;
+                            }
+                            @Html.Raw("</td></tr>") 
+                        </tbody>
+                    </table>
+                }
+                else
+                {
+                    <div class="alert alert-info">
+                        No Course is Added Yet.
+                    </div>
+                }
+            </div>
+            <!-- /.table-responsive -->
+        </div>
+    </div>
+    <!-- /.panel-body -->
+</div>
+<!-- /.panel -->

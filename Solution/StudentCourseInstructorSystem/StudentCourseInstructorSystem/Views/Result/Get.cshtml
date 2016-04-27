@@ -1,0 +1,62 @@
+﻿@using UniversityManagementApp.Models
+
+@{
+    Layout = null;
+    List<ResultView> resultViews = ViewBag.resultViews;
+    string notGraded = "Not Graded Yet";
+}
+
+<div class="panel panel-default" style="margin-top: 15px;">
+    <div class="panel-heading">
+        Result
+    </div>
+    <!-- /.panel-heading -->
+    <div class="panel-body">
+        <div class="col-md-8 col-md-offset-2">
+
+            @if (resultViews.Count() > 0)
+            {
+                <div class="table-responsive table-bordered">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Code</th>
+                                <th>Name</th>
+                                <th>Grade</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var row in resultViews)
+                            {
+                                <tr>
+                                    <td>@row.CourseCode</td>
+                                    <td>@row.CourseName</td>
+                                    <td>
+                                        @if (row.GradeLetter != "")
+                                        {
+                                            @row.GradeLetter
+                                        }
+                                        else
+                                        {
+                                            @notGraded
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            <!-- /.table-responsive -->
+            }
+            else
+            {
+                <div class="alert alert-info">
+                    This student is not enrolled to any course.
+                </div>
+            }
+
+        </div>
+    </div>
+    <!-- /.panel-body -->
+</div>
+<!-- /.panel -->

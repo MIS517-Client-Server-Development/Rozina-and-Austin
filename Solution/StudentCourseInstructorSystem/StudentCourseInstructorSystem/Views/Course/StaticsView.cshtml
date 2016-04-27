@@ -1,0 +1,63 @@
+﻿@using System.Activities.Expressions
+@using UniversityManagementApp.Models
+
+@{
+    Layout = null;
+    List<CourseStaticsView> courseStatics = ViewBag.courseStatics;
+    string notAssigned = "Not Assigned Yet";
+}
+
+<div class="panel panel-default" style="margin-top: 15px;">
+    <div class="panel-heading">
+        Course Information
+    </div>
+    <!-- /.panel-heading -->
+    <div class="panel-body">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="table-responsive table-bordered">
+                @if (courseStatics.Count() > 0)
+                {
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Code</th>
+                                <th>Name/Title</th>
+                                <th>Semester</th>
+                                <th>Assigned To</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var row in courseStatics)
+                            {
+                                <tr>
+                                    <td>@row.CourseCode</td>
+                                    <td>@row.CourseName</td>
+                                    <td>@row.SemesterName</td>
+                                    <td>
+                                        @if (row.TeacherName != "")
+                                        {
+                                            @row.TeacherName
+                                        }
+                                        else
+                                        {
+                                            @notAssigned
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+                else
+                {
+                    <div class="alert alert-info">
+                        No Course is Added Yet.
+                    </div>
+                }
+            </div>
+            <!-- /.table-responsive -->
+        </div>
+    </div>
+    <!-- /.panel-body -->
+</div>
+<!-- /.panel -->

@@ -1,0 +1,104 @@
+﻿@using UniversityManagementApp.Models
+
+@{
+    ViewBag.Title = "Save Student Result";
+    ActionResponse response = ViewBag.response;
+    List<StudentSelectView> students = ViewBag.Students;
+    List<Grade> grades = ViewBag.Grades;
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Save Student Result</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Save Result
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        @if (response != null)
+                        {
+                            <div class="alert alert-@response.Class alert-dismissable">
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                @response.Message
+                            </div>
+                        }
+                        <form class="form-horizontal" id="SaveResult" method="POST">
+                            <div class="form-group">
+                                <label for="StudentId" class="col-sm-3 control-label">Student Reg. No.</label>
+                                <div class="col-sm-9">
+                                    <select name="StudentId" id="StudentId" class="form-control">
+                                        <option value="">Select Student</option>
+                                        @foreach (var std in students)
+                                        {
+                                            <option value="@std.StudentId">@std.RegNo</option>
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="StudentName" class="col-sm-3 control-label">Name</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="StudentName" placeholder="" disabled>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="StudentEmail" class="col-sm-3 control-label">Email</label>
+                                <div class="col-sm-9">
+                                    <input type="email" class="form-control" id="StudentEmail" placeholder="" disabled>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="DepartmentName" class="col-sm-3 control-label">Department</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="DepartmentName" placeholder="" disabled>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="CourseId" class="col-sm-3 control-label">Available Courses</label>
+                                <div class="col-sm-9">
+                                    <select name="CourseId" id="CourseId" class="form-control">
+                                        <option value="">Select Course</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="GradeId" class="col-sm-3 control-label">Grade Letter</label>
+                                <div class="col-sm-9">
+                                    <select name="GradeId" id="GradeId" class="form-control">
+                                        <option value="">Select Grade</option>
+                                        @foreach (var grade in grades)
+                                        {
+                                            <option value="@grade.GradeId">@grade.GradeLetter</option>
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-3 col-sm-9">
+                                    <button type="submit" class="btn btn-primary"><i class="fa fa-plus-square"></i> Save</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+@section Scripts {
+    @Scripts.Render("~/Scripts/page/saveResult.js")
+}
+

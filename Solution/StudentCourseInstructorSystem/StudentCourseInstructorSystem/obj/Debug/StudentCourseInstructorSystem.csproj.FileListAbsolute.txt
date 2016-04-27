@@ -1,0 +1,7 @@
+C:\FILES\Git Repository\Rozina-and-Austin\Solution\StudentCourseInstructorSystem\StudentCourseInstructorSystem\bin\UniversityManagementApp.dll.config
+C:\FILES\Git Repository\Rozina-and-Austin\Solution\StudentCourseInstructorSystem\StudentCourseInstructorSystem\bin\UniversityManagementApp.dll
+C:\FILES\Git Repository\Rozina-and-Austin\Solution\StudentCourseInstructorSystem\StudentCourseInstructorSystem\bin\UniversityManagementApp.pdb
+C:\FILES\Git Repository\Rozina-and-Austin\Solution\StudentCourseInstructorSystem\StudentCourseInstructorSystem\bin\Rotativa.dll
+C:\FILES\Git Repository\Rozina-and-Austin\Solution\StudentCourseInstructorSystem\StudentCourseInstructorSystem\obj\Debug\StudentCourseInstructorSystem.csprojResolveAssemblyReference.cache
+C:\FILES\Git Repository\Rozina-and-Austin\Solution\StudentCourseInstructorSystem\StudentCourseInstructorSystem\obj\Debug\UniversityManagementApp.dll
+C:\FILES\Git Repository\Rozina-and-Austin\Solution\StudentCourseInstructorSystem\StudentCourseInstructorSystem\obj\Debug\UniversityManagementApp.pdb

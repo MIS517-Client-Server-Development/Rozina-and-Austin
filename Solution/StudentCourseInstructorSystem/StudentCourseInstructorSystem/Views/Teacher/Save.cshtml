@@ -1,0 +1,126 @@
+﻿@using UniversityManagementApp.Models
+@{
+    ViewBag.Title = "Add New Teacher";
+    List<Department> departments = ViewBag.Departments;
+    List<Designation> designations = ViewBag.Designations;
+    ActionResponse response = ViewBag.response;
+    string teacherName = "";
+    string teacherAddress = "";
+    string teacherEmail = "";
+    string teacherContactNo = "";
+    string creditTaken = "";
+    int designationId = 0;
+    int departmentId = 0;
+    if (response != null && response.Class != "success")
+    {
+        teacherName = Request["TeacherName"].ToString();
+        teacherAddress = Request["TeacherAddress"].ToString();
+        teacherEmail = Request["TeacherEmail"].ToString();
+        teacherContactNo = Request["TeacherContactNo"].ToString();
+        creditTaken = Request["CreditTaken"].ToString();
+        designationId = Convert.ToInt32(Request["DesignationId"].ToString());
+        departmentId = Convert.ToInt32(Request["DepartmentId"].ToString());
+    }
+
+    string selected = "selected";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Add New Teacher</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Save Teacher
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        @if (response != null)
+                        {
+                            <div class="alert alert-@response.Class alert-dismissable">
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                @response.Message
+                            </div>
+                        }
+                        <form class="form-horizontal" id="TeacherSave" method="POST">
+                            <div class="form-group">
+                                <label for="TeacherName" class="col-sm-2 control-label">Name</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="TeacherName" id="TeacherName" value="@teacherName" placeholder="Teacher's Name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="TeacherAddress" class="col-sm-2 control-label">Address</label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control" id="TeacherAddress" name="TeacherAddress" rows="3">@teacherAddress</textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="TeacherEmail" class="col-sm-2 control-label">Email</label>
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control" name="TeacherEmail" id="TeacherEmail" value="@teacherEmail" placeholder="Email Address">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="TeacherContactNo" class="col-sm-2 control-label">Contact. No.</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="TeacherContactNo" id="TeacherContactNo" value="@teacherContactNo" placeholder="Contact Number">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="DesignationId" class="col-sm-2 control-label">Designation</label>
+                                <div class="col-sm-10">
+                                    <select name="DesignationId" id="DesignationId" class="form-control">
+                                        <option value="">Select Designation</option>
+                                        @foreach (var designation in designations)
+                                        {
+                                            <option value="@designation.DesignationId" @if (designation.DesignationId == designationId) { @selected  }>@designation.DesignationName</option>
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="DepartmentId" class="col-sm-2 control-label">Department</label>
+                                <div class="col-sm-10">
+                                    <select name="DepartmentId" id="DepartmentId" class="form-control">
+                                        <option value="">Select Department</option>
+                                        @foreach (var dept in departments)
+                                        {
+                                            <option value="@dept.DepartmentId" @if (dept.DepartmentId == departmentId) { @selected    }>@dept.DepartmentName</option>
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="CreditTaken" class="col-sm-2 control-label">Credit Taken</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="CreditTaken" id="CreditTaken" value="@creditTaken" placeholder="Credit to be Taken">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="submit" class="btn btn-default">Save</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+@section Scripts {
+    @Scripts.Render("~/Scripts/page/saveTeacher.js")
+}
+

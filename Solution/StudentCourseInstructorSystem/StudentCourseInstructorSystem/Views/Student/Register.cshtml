@@ -1,0 +1,139 @@
+﻿@using UniversityManagementApp.Models
+
+@{
+    ViewBag.Title = "Register";
+    List<Department> departments = ViewBag.departments;
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Add New Student</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Register Student
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div id="alert"></div>
+                        <form class="form-horizontal" id="RegisterStudent" method="POST">
+                            <div class="form-group">
+                                <label for="StudentName" class="col-sm-2 control-label">Name</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="StudentName" id="StudentName" placeholder="Student Name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="StudentEmail" class="col-sm-2 control-label">Email</label>
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control" name="StudentEmail" id="StudentEmail" placeholder="Student Email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="StudentContactNo" class="col-sm-2 control-label">Contact No</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="StudentContactNo" id="StudentContactNo" placeholder="Student Contact No">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="RegDate" class="col-sm-2 control-label">Date</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="RegDate" id="RegDate" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="StudentAddress" class="col-sm-2 control-label">Address</label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control" name="StudentAddress" id="StudentAddress" rows="3"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="DepartmentId" class="col-sm-2 control-label">Department</label>
+                                <div class="col-sm-10">
+                                    <select name="DepartmentId" id="DepartmentId" class="form-control">
+                                        <option value="">Select Department</option>
+                                        @foreach (var dept in departments)
+                                        {
+                                            <option value="@dept.DepartmentId">@dept.DepartmentName</option>
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="submit" id="SaveBtn" class="btn btn-primary"><i class="fa fa-plus-square"></i> Register</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+
+<!-- Modal -->
+<div class="modal fade" id="regSuccessfulModal" tabindex="-1" role="dialog" aria-labelledby="regSuccessfulModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="regSuccessfulModalLabel">Registration Successful</h4>
+            </div>
+            <div class="modal-body">
+                <table class="table table-striped table-bordered">
+                    <tr class="success">
+                        <th>Reg. No</th>
+                        <td id="forRegNo"></td>
+                    </tr>
+                    <tr>
+                        <th>Name</th>
+                        <td id="forStudentName"></td>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <td id="forStudentEmail"></td>
+                    </tr>
+                    <tr>
+                        <th>Contact No</th>
+                        <td id="forStudentContactNo"></td>
+                    </tr>
+                    <tr>
+                        <th>Address</th>
+                        <td id="forStudentAddress"></td>
+                    </tr>
+                    <tr>
+                        <th>Department</th>
+                        <td id="forDepartment"></td>
+                    </tr>
+                    <tr>
+                        <th>Reg. Date</th>
+                        <td id="forRegDate"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close Window</button>
+            </div>
+        </div>
+    </div>
+</div>
+@section Styles {
+    @Styles.Render("~/Content/datepicker")
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/datepicker")
+    @Scripts.Render("~/Scripts/page/studentRegister.js")
+}
+

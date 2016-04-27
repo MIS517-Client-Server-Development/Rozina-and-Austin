@@ -1,0 +1,113 @@
+﻿@using UniversityManagementApp.Models
+
+@{
+    Layout = null;
+    StudentDetailView student = ViewBag.Student;
+    List<ResultView> resultViews = ViewBag.resultViews;
+    string now = DateTime.Now.ToString("dddd, MMMM dd, yyyy h:mm tt");
+    string notGraded = "Not Graded Yet";
+}
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+    <title>Result Shoot of @student.StudentName</title>
+    <!-- BOOTSTRAP CORE STYLE CSS -->
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/result-sheet.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="container outer-section">
+        <div id="print-area">
+            <div class="row ">
+                <div class="col-xs-6">
+                    <h2>Student Information :</h2>
+                    <h4><strong>@student.StudentName</strong></h4>
+                    <h4>@student.StudentAddress</h4>
+                    <h4>
+                        <strong>Email: </strong><a class="__cf_email__" href="mailto:@student.StudentEmail">@student.StudentEmail</a>
+                    </h4>
+                    <h4><strong>Call: </strong>@student.StudentContactNo</h4>
+                </div>
+                <div class="col-xs-6">
+                    <h2>Department Details :</h2>
+                    <h4><strong>Reg. No: </strong>@student.RegNo</h4>
+                    <h4>Registration Date:  @student.RegDate.ToString("MMMM dd, yyyy");</h4>
+                    <h4><strong>Department : </strong>@student.DepartmentName</h4>
+                    <h4><strong>Department Code : </strong>@student.DepartmentCode</h4>
+                </div>
+            </div>
+            <hr />
+            <br />
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    @if (resultViews.Count() > 0)
+                    {
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Code</th>
+                                        <th>Name</th>
+                                        <th>Grade</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var row in resultViews)
+                                    {
+                                        <tr>
+                                            <td>@row.CourseCode</td>
+                                            <td>@row.CourseName</td>
+                                            <td>
+                                                @if (row.GradeLetter != "")
+                                                {
+                                                    @row.GradeLetter
+                                                }
+                                                else
+                                                {
+                                                    @notGraded
+                                                }
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.table-responsive -->
+                    }
+                    else
+                    {
+                        <div class="alert alert-info">
+                            This student is not enrolled to any course.
+                        </div>
+                    }
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <strong>
+                        IMPORTANT INSTRUCTIONS :
+                    </strong>
+                    <h5># This is an electronic result sheet, so doesn't require any signature.</h5>
+                    <h5># If it shows "Not Graded Yet", that is, your result is not received yet.</h5>
+                    <h5># Any circumstances likely to affect your examination performance should be notified to the Departmental Tutor.</h5>
+                </div>
+            </div>
+
+        </div>
+        <hr />
+        <div class="row pad-bottom">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <h5>Note : This result sheet is dynamically generated on: @now</h5>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
