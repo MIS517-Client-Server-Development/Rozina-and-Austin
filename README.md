@@ -1,4 +1,4 @@
-# MIS517-StudentEnrollmentManagementSystem
+# MIS517
 
 Goal
 ----
