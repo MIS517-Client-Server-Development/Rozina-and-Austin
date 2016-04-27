@@ -18,27 +18,15 @@ Resources Used
 The Project
 -----------
 
-A sample project is proposed below; however, students can develop their own project if they want to. The size of the project and the milestones should be similar to the one shown in the sample project. If you decide to do your own project, you need develop milestones by week 7 and discuss them with me before starting the project. If a project is not discussed, you are required to complete the project below.
 
-The "standard" project will be to build part of a website for “**Student Enrollment Management website**”. 
+The "standard" project will be to build part of a website for “**SCIS**”. 
 
 There will be a project plan with *milestones* and *deliverables.* The milestones serve as control points to verify the proper progress. The project will allow students to integrate many programming tools to achieve the goal. Some of those tools will be discussed in the class. Others can be obtained using the external resources.
 
 Requirements
 ------------
 
-The **Student Enrollment Management System** allows the user to access his/her class information. Below are the details of the requirements.
 
-1.  The main login screen should have username and password and buttons to allow the user to log in. It also provides a link or a button to allow the user to register a new user.
-2.  When the user successfully login, the main screen will provide access to the instructor page.
-3. Instructor will be able to entering the student information.
-4. Admins can create new courses
-5. Students Can Enroll in a course listed under courses listings.
-6. Departments offer certain courses.
-7. Instructor (employees) are assigned to departments.
-8.  The website lets the instructor enter, review, update and delete the enrollment of the students of the class.
-9.  The website will allow students drop courses as well.
-10. The user should be able to log out at any time. If the user logout, the application should take the user to the login screen.
 
 Team requirements:
 ------------------
@@ -52,73 +40,6 @@ You may work in a team of 2 if you complete the following requirements also.
 Database Design
 ---------------
 
-The database should have the following tables: 
-
-
-## Login Table
-
-
-## Admin Table
-
-**Admin** ( Admin_ID, First_Name, Last_Name, Email, Password)
-
-**PRIMARY KEY**: Admin_ID
-
-**FOREIGN KEY**:
-
-## Course Table
-
-**Course** ( Course_ID, CourseNumber, CourseTitle, Description, Prereq, Units)
-
-**PRIMARY KEY**: Course_ID
-
-**FOREIGN KEY**:
-
-## Instructor To Course Table
-
-**Instructor_To_Course** (Course_ID, Instructor_ID, CourseTitle) 
-
-**PRIMARY KEY**: 
-
-**FOREIGN KEY**:
-
-## Student To Course Table
-
-**Student_To_Course** (Course_ID, CourseTitle, Student_Id) 
-
-
-**PRIMARY KEY**: 
-
-**FOREIGN KEY**:
-
-
-
-
-## Enrollment Table
-
-**PRIMARY KEY**: 
-
-**FOREIGN KEY**:
-
-
-## Schedule Table
-
-**PRIMARY KEY**: 
-
-**FOREIGN KEY**:
-
-## Instructor Table
-
-
-**PRIMARY KEY**: 
-
-**FOREIGN KEY**:
-
-## Student Table
-
-**PRIMARY KEY**: 
-
-**FOREIGN KEY**:
 
 ## Project Grading
 
